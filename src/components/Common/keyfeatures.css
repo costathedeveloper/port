@@ -1,0 +1,64 @@
+.features {
+    padding: 50px;
+    margin-top: 20px;
+ }
+ .session-title {
+    padding: 30px;
+    margin: 0px;
+    margin-bottom: 20px; }
+    .session-title h2 {
+        width: 100%;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600; 
+        font-size: 30px;
+    }
+      .session-title p {
+        max-width: 850px;
+        text-align: center;
+        float: none;
+        margin: auto;
+        font-size: .83rem;
+        margin-top: 15px; }
+      .session-title span {
+        float: right;
+        font-style: italic; }
+    @media screen and (max-width: 940px) {
+      .features {
+        padding: 30px 10px; } }
+    .features .ker-featur-row {
+      margin-top: 20px; }
+    .features .featurecol .single-feature {
+      margin-bottom: 50px;
+      display: flex; }
+      .features .featurecol .single-feature .icon {
+        padding: 25px;
+        margin: auto; }
+        .features .featurecol .single-feature .icon i {
+          font-size: 29px; }
+      .features .featurecol .single-feature i {
+        font-size: 1.5rem; }
+      .features .featurecol .single-feature h6 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-weight: 400;
+        font-size: 1.2rem; }
+      .features .featurecol .single-feature p {
+        font-weight: 300;
+        font-size: .96rem;
+        color: #FFF;
+        font-weight: 500; }
+    .features .feature-left .single-feature {
+      text-align: right;
+      display: flex; }
+      .features .feature-left .single-feature .icon {
+        padding: 25px;
+        margin: auto; }
+        .features .feature-left .single-feature .icon i {
+          font-size: 29px; }
+    .features .featur-image {
+      padding-top: 15px;
+      text-align: center; }
+      .features .featur-image img {
+        margin-top: -40px; }
+  

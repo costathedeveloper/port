@@ -1,0 +1,88 @@
+export const menuItemsData = [
+    {
+      title: "Home",
+      url: "/"
+    },
+  {
+      title: "Destinations",
+      url: "/",
+      submenu: [
+        {
+          title: "South Africa",
+          url: "south-africa",
+          submenu: [
+            {
+              title: "Cape Town",
+              url: "cape-town",
+            },
+            {
+              title: "Safari",
+              url: "sa-safari",
+            },
+            {
+              title: "Garden Route",
+              url: "garden-route",
+            }
+          ],
+        },
+        {
+          title: "Zimbabwe",
+          url: "zimbabwe",
+        },
+        {
+          title: "Botswana",
+          url: "botswana",
+        },
+      ],
+    },
+    {
+      title: "Experiences",
+      url: "/all-tours",
+      submenu: [
+        {
+          title: "All Tours",
+          url: "all-tours",
+        },
+        {
+          title: "Full Day Tours",
+          url: "full-day-tours",
+        },
+        {
+          title: "Half Day Tours",
+          url: "half-day-tours",
+        },
+        {
+          title: "Multiple Day Tours",
+          url: "multiple-day-tours",
+        },
+        {
+          title: "Garden Route Tour",
+          url: "garden-route-tours",
+        },
+        {
+          title: "Safari",
+          url: "safari",
+        },
+        {
+          title: "Transfers",
+          url: "transfers",
+        },
+      ],
+    },
+    {
+      title: "Journeys",
+      url: "/journeys",
+    },
+    {
+      title: "Our Story",
+      url: "/about",
+    },
+    {
+      title: "Travel Guide",
+      url: "/travel-guide",
+    },
+    {
+      title: "Contact",
+      url: "/contact",
+    },
+  ];
