@@ -768,3 +768,10 @@ bg-background{
     background-position: center;
     background-repeat: repeat;
 }
+.priceback
+  {
+    background-image: url('/public/assets/images/travelback2.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+}

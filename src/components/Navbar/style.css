@@ -127,6 +127,7 @@ header {
 
 .mobile-nav {
     display: none;
+    background-color: black;
 }
 
 /* Menu on mobile */
@@ -170,7 +171,7 @@ header {
     .mobile-nav .menu-items a {
         display: block;
         font-size: inherit;
-        color: inherit;
+        color: black;
         text-decoration: none;
     }
 

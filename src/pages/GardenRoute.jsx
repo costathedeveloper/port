@@ -16,6 +16,7 @@ const GardenRoute=()=>{
     description="Garden Route Destinations"
     />
         <About />
+        
         <Destinations1 />
         <Explore />
         <KeyFeatures />

@@ -28,10 +28,38 @@ export const menuItemsData = [
         {
           title: "Zimbabwe",
           url: "zimbabwe",
+          submenu: [
+            {
+              title: "Victoria Falls",
+              url: "cape-town",
+            },
+            {
+              title: "Hwange National Park",
+              url: "sa-safari",
+            },
+            {
+              title: "Great Zimbabwe",
+              url: "garden-route",
+            }
+          ],
         },
         {
           title: "Botswana",
-          url: "botswana",
+          url: "south-africa",
+          submenu: [
+            {
+              title: "Okavango Delta",
+              url: "cape-town",
+            },
+            {
+              title: "Chobe National Park",
+              url: "sa-safari",
+            },
+            {
+              title: "Central Kalahari Game Reserve",
+              url: "garden-route",
+            }
+          ],
         },
       ],
     },

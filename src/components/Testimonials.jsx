@@ -14,43 +14,43 @@ export default function Testimonials() {
       id: 1,
       image: TestimonialImage01,
       text: "This tour was incredible!! Candy and Mabee made this amazing! The amount of history and cultural knowledge shared during the all day tour was fascinating and I fell in love with the Western Cape area and can’t wait to return!",
-      author: "asatoasz",
-      position: "UK"
+      author: "example",
+      position: "Cape Town"
     },
     {
       id: 2,
       image: TestimonialImage02,
       text: "Fantastic tour!!Candice was a wonderful and knwoledgeable tourist guide, you can basically ask her anything!",
       author: "Example",
-      position: "UK"
+      position: "Cape Town"
     },
     {
       id: 3,
       image: TestimonialImage03,
       text: "Fantastic tour!!Candice was a wonderful and knwoledgeable tourist guide, you can basically ask her anything!",
       author: "Example",
-      position: "UK"
+      position: "Cape Town"
     },
     {
       id: 3,
       image: TestimonialImage03,
       text: "Fantastic tour!!Candice was a wonderful and knwoledgeable tourist guide, you can basically ask her anything!",
       author: "Example",
-      position: "UK"
+      position: "Cape Town"
     },
     {
       id: 3,
       image: TestimonialImage03,
       text: "Fantastic tour!!Candice was a wonderful and knwoledgeable tourist guide, you can basically ask her anything!",
       author: "Example",
-      position: "UK"
+      position: "Cape Town"
     },
     {
       id: 3,
       image: TestimonialImage03,
       text: "Fantastic tour!!Candice was a wonderful and knwoledgeable tourist guide, you can basically ask her anything!",
       author: "Example",
-      position: "UK"
+      position: "Cape Town"
     },
   ];
 

@@ -1,24 +1,9 @@
 import React, { useState } from "react";
-import { useTrail, useTransition, animated, config } from "react-spring";
 import { Link } from "react-router-dom";
 
 const Card = ({ item }) => {
     const [showModal, setShowModal] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
-
-    const trail = useTrail(item.length, {
-        from: { opacity: 0, transform: "scale(0.8)" },
-        to: { opacity: 1, transform: "scale(1)" },
-        config: config.wobbly,
-        delay: 200,
-    });
-
-    const transitions = useTransition(showModal && selectedItem, {
-        from: { opacity: 0, transform: "translateY(-50%)" },
-        enter: { opacity: 1, transform: "translateY(0%)" },
-        leave: { opacity: 0, transform: "translateY(-50%)" },
-        config: config.stiff,
-    });
 
     const openModal = (index) => {
         setShowModal(true);
@@ -33,65 +18,25 @@ const Card = ({ item }) => {
     return (
         <div className="container-fluid mb-8 relative z-50">
             <div className="flex flex-wrap justify-center mx-10 gap-8">
-                {trail.map((props, index) => (
-                    <animated.div
-                        style={props}
-                        className="max-w-sm bg-zinc rounded-lg shadow relative"
-                        key={item[index].id}
-                    >
+                {item.map((item, index) => (
+                    <div className="max-w-sm bg-zinc rounded-lg shadow relative" key={item.id}>
                         <div className="text-center">
-                            <animated.img
-                                src={item[index].img}
-                                alt={item[index].title}
-                                className="rounded-t-lg"
-                                style={{
-                                    transform: props.transform,
-                                    opacity: props.opacity,
-                                }}
-                            />
+                            <img src={item.img} alt={item.title} className="rounded-t-lg" />
                         </div>
                         <div className="p-5">
-                            <Link to={`/details/${item[index].id}`} className="block">
-                                <animated.h5
-                                    className="mb-2 text-2xl font-bold tracking-tight text-white"
-                                    style={{
-                                        transform: props.transform,
-                                        opacity: props.opacity,
-                                    }}
-                                >
-                                    {item[index].title}
-                                </animated.h5>
+                            <Link to={`/details/${item.id}`} className="block">
+                                <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
+                                    {item.title}
+                                </h5>
                             </Link>
-                            <animated.h6
-                                className="text-xl font-bold tracking-tight text-yellow-200"
-                                style={{
-                                    transform: props.transform,
-                                    opacity: props.opacity,
-                                }}
-                            >
-                                {item[index].price}
-                            </animated.h6>
-                            <animated.p
-                                className="mb-3 font-normal text-gray-400"
-                                style={{
-                                    transform: props.transform,
-                                    opacity: props.opacity,
-                                }}
-                            >
-                                {item[index].desc}
-                            </animated.p>
-                            <animated.p
-                                className="mb-3 font-normal text-white"
-                                style={{
-                                    transform: props.transform,
-                                    opacity: props.opacity,
-                                }}
-                            >
-                                {item[index].duration}
-                            </animated.p>
+                            <h6 className="text-xl font-bold tracking-tight text-yellow-200">
+                                {item.price}
+                            </h6>
+                            <p className="mb-3 font-normal text-gray-400">{item.desc}</p>
+                            <p className="mb-3 font-normal text-white">{item.duration}</p>
                             <div className="flex justify-between mx-auto">
                                 <Link
-                                    to={`/details/${item[index].id}`}
+                                    to={`/details/${item.id}`}
                                     className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-yellow-200 focus:ring-4 focus:outline-none focus:ring-zinc"
                                 >
                                     VIEW DETAILS
@@ -119,19 +64,16 @@ const Card = ({ item }) => {
                                 </button>
                             </div>
                         </div>
-                    </animated.div>
+                    </div>
                 ))}
             </div>
-            {transitions((style, item) =>
-                item ? (
-                    <animated.div
-                        style={style}
-                        className="fixed inset-0 myindex flex items-center justify-center bg-opacity-75"
-                    >
-                        <div className="bg-white p-8 rounded-lg shadow-lg max-w-screen-lg w-full h-full overflow-y-auto">
+            {showModal && selectedItem && (
+                <div className="fixed inset-0 flex items-center justify-center bg-opacity-75">
+                    <div className="bg-white p-8 rounded-lg shadow-lg w-full h-full overflow-y-auto relative">
+                        <div className="flex justify-between items-center mb-4">
                             <button
                                 onClick={closeModal}
-                                className="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
+                                className="text-gray-600 hover:text-gray-800"
                             >
                                 <svg
                                     className="w-6 h-6"
@@ -148,14 +90,16 @@ const Card = ({ item }) => {
                                     />
                                 </svg>
                             </button>
-                            <iframe
-                                src={selectedItem.bookingWidgetURL}
-                                title="Booking Widget"
-                                className="w-full h-full"
-                            />
+                        
                         </div>
-                    </animated.div>
-                ) : null
+                        {/* Cart content goes here */}
+                        <iframe
+                            src={selectedItem.bookingWidgetURL}
+                            title="Booking Widget"
+                            className="w-full h-full"
+                        />
+                    </div>
+                </div>
             )}
         </div>
     );
